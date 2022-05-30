@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../src/App.css'
+import NavBar from './components/navbar';
+import LandingPage from './components/landingPage';
+import DogsList from './components/dogsList';
+import DogInfo from './components/dogInfo';
+import Login from './components/login';
+import Favorites from './components/favorites';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' exact element={[<NavBar/>, <LandingPage/>]}/>
+        <Route path='/login' exact element={[<NavBar/>, <Login/>]}/>
+        <Route path='/dogs' exact element={[<NavBar/>, <DogsList/>]}/>
+        <Route path='/favorites' exact element={[<NavBar/>, <Favorites/>]}/>
+        <Route path='/dog/:dogId' exact element={[<NavBar/>, <DogInfo/>]}/>
+      </Routes>
+    </Router>
+    
   );
-}
+}  
 
 export default App;

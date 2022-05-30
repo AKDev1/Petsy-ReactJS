@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left{
+  padding-top: 5rem;
+  width: 15%;
+  float: left;
+  position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group{
+  padding-left: 1rem;
+  width: 90% !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list-after-login{
+  width: 85%;
+  float: right;
+  padding-top: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-before-login{
+  padding-top: 5rem;
+}
+
+.list{
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter{
+  padding-left: 1rem;
+  position: fixed;
+  width: 15%;
+}
+
+.nav{
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.filter-select{
+  width: 90%;
+}
+
+.same-line-card{
+  display: inline-flex;
+}
+
+.col-3, .land-page-col, .fav-col{
+  padding-bottom: 1rem;
+}
+
+.dog-info-card{
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-form-div{
+  padding-top: 15rem;
+  width: 30% !important;
 }
